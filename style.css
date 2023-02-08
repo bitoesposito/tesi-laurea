@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --main-color: #ff0000;
+    --secondary-color: #ffffff;
+    --bg-color: #ececec;
+    --text-color: #1f1f1f;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Playfair Display', serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+h1, h2, h3, h4, p, a, ul {
+    font-family: 'Playfair Display', serif;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+ul {
+    list-style-type: none;
+}
+
+img {
+    width: 100%;
+}
+
+body {
+    background-color: var(--bg-color);
+}
+
+/* nav */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 55px;
+    background-color: var(--main-color);
+    z-index: 2;
+}
+
+nav .container {
+    display: flex;
+    align-items: center;
+    height: 55px;
+    padding: 0 2rem;
+    justify-content: space-between;
+    max-width: 800px;
+    align-items: center;
+    margin: auto;
+}
+
+.logo {
+    display: flex;
+    font-size: 1rem;
+    color: var(--secondary-color);
+    align-items: center;
+}
+
+.logo img {
+    height: 40px;
+    width:auto;
+    margin-right: 10px;
+}
+
+/* search */
+form i{
+    color: var(--secondary-color);
+    cursor: pointer;
+    position: relative;
+    top: 0.5px;
+    font-size: 1.3rem;
+}
+
+/* main */
+main {
+    position: relative;
+    top: 100px;
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    margin: auto;
+    padding: 0 2rem;
+}
+
+.article {
+    padding-bottom: 1rem;
+}
+
+/* footer */
+footer {
+    position: relative;
+    top: 100px;
+    background-color: var(--bg-color);
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--text-color);
+    max-width: 800px;
+    align-items: center;
+    margin: auto;
+    margin-top: 2rem;
+    z-index: 2;
+    border-top: 1px solid var(--text-color);
+}
+
+.social-icon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background-color: var(--main-color);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+}
+
+.social-icon li a i {
+    color: var(--secondary-color);
+}
+
+/* accordion */
+.accordion-item h1 {
+    padding: 1rem 0;
+	cursor: pointer;
+	border-top: 1px solid var(--text-color);
+	text-transform: none;
+}
+
+.accordion-item:first-child h1 {
+	border-top: none;
+}
+
+.accordion-item:last-child h1 {
+	border-bottom: none;
+
+}
+
+.accordion-item.open:last-child h1 {
+	border-radius: 0;
+}
+
+.accordion-item h1::after {
+	content: "+";
+	float: right;
+}
+
+.accordion-item p {
+	margin: 0;
+	display: block;
+	max-height: 0;
+	overflow: hidden;
+	transition: 0.3s;
+}
+
+.accordion-item.open p {
+	padding: 1rem 0;
+}
+
+.accordion-item.open h1::after {
+	content: "-";
+    font-weight: 100;
+}
